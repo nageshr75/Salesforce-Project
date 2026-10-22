@@ -1,3 +1,4 @@
+//Account Trigger Handler
 public class AccountTriggerHandler {
     public static void preventDuplicateAccountName(List<Account> newList) {
 
