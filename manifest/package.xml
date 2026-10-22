@@ -12,9 +12,5 @@
         <members>AccountTrigger</members>
         <name>ApexTrigger</name>
     </types>
-    <!--types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
-    </types-->
     <version>67.0</version>
 </Package>
