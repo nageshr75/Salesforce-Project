@@ -3,6 +3,8 @@ public class OpportunityTriggerHandler {
     public static void recentOpportunityAmount(List<Opportunity> newOppList,Map<Id, Opportunity> oldMap) {
 
         Set<Id> accountIds = new Set<Id>();
+        System.debug('newOppList: '+newOppList);
+        System.debug('oldMap: '+oldMap);
 
         for (Opportunity opp : newOppList) {
 
@@ -14,6 +16,7 @@ public class OpportunityTriggerHandler {
             }
             // Update
             else {
+                System.debug('in else block');
                 Opportunity oldOpp = oldMap.get(opp.Id);
 
                 if (opp.Amount != oldOpp.Amount &&
@@ -45,6 +48,7 @@ public class OpportunityTriggerHandler {
                     RecentOpportunityAmount__c = opp.Amount
                 )
             );
+            System.debug('accountsToUpdate: '+accountsToUpdate);
         }
 
         if (!accountsToUpdate.isEmpty()) {
